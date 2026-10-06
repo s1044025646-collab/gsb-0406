@@ -1,0 +1,18 @@
+{
+  "name": "squarified-treemap",
+  "version": "1.0.0",
+  "description": "Squarified 矩形树图布局与面积比例核验后端",
+  "main": "dist/src/cli.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test dist/test/treemap.test.js",
+    "start": "npm run build && node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
