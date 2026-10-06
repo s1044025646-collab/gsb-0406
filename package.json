@@ -1,0 +1,20 @@
+{
+  "name": "squarify-treemap",
+  "version": "1.0.0",
+  "description": "Squarified 矩形树图布局与面积比例核验后端（TypeScript + Node.js + SQLite）",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test test/*.test.js",
+    "start": "npm run build && node dist/server.js",
+    "demo": "npm run build && node dist/cli.js demo",
+    "cli": "node dist/cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}

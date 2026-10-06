@@ -1,0 +1,218 @@
+{
+  "layout": {
+    "id": 1,
+    "name": "demo-等权四块",
+    "createdAt": "2026-10-06T09:59:05.687Z",
+    "container": {
+      "width": 4,
+      "height": 4
+    },
+    "items": [
+      {
+        "id": "甲",
+        "weight": 1
+      },
+      {
+        "id": "乙",
+        "weight": 1
+      },
+      {
+        "id": "丙",
+        "weight": 1
+      },
+      {
+        "id": "丁",
+        "weight": 1
+      }
+    ],
+    "result": {
+      "container": {
+        "width": 4,
+        "height": 4
+      },
+      "totalWeight": 4,
+      "rects": [
+        {
+          "id": "甲",
+          "x": 0,
+          "y": 0,
+          "width": 2,
+          "height": 2,
+          "area": 4,
+          "targetArea": 4
+        },
+        {
+          "id": "乙",
+          "x": 0,
+          "y": 2,
+          "width": 2,
+          "height": 2,
+          "area": 4,
+          "targetArea": 4
+        },
+        {
+          "id": "丙",
+          "x": 2,
+          "y": 0,
+          "width": 2,
+          "height": 2,
+          "area": 4,
+          "targetArea": 4
+        },
+        {
+          "id": "丁",
+          "x": 2,
+          "y": 2,
+          "width": 2,
+          "height": 2,
+          "area": 4,
+          "targetArea": 4
+        }
+      ],
+      "skipped": [],
+      "strips": [
+        {
+          "index": 0,
+          "itemIds": [
+            "甲",
+            "乙"
+          ],
+          "orientation": "column",
+          "shortSide": 4,
+          "thickness": 2,
+          "containerBefore": {
+            "x": 0,
+            "y": 0,
+            "width": 4,
+            "height": 4
+          },
+          "containerAfter": {
+            "x": 2,
+            "y": 0,
+            "width": 2,
+            "height": 4
+          },
+          "trials": [
+            {
+              "candidateId": "甲",
+              "shortSide": 4,
+              "worstBefore": null,
+              "worstAfter": 4,
+              "accepted": true,
+              "reason": "空条带，直接接受首项"
+            },
+            {
+              "candidateId": "乙",
+              "shortSide": 4,
+              "worstBefore": 4,
+              "worstAfter": 1,
+              "accepted": true,
+              "reason": "加入后最差比例改善"
+            },
+            {
+              "candidateId": "丙",
+              "shortSide": 4,
+              "worstBefore": 1,
+              "worstAfter": 2.25,
+              "accepted": false,
+              "reason": "加入后最差比例变差，封条并转入下一条带"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "itemIds": [
+            "丙"
+          ],
+          "orientation": "row",
+          "shortSide": 2,
+          "thickness": 2,
+          "containerBefore": {
+            "x": 2,
+            "y": 0,
+            "width": 2,
+            "height": 4
+          },
+          "containerAfter": {
+            "x": 2,
+            "y": 2,
+            "width": 2,
+            "height": 2
+          },
+          "trials": [
+            {
+              "candidateId": "丙",
+              "shortSide": 2,
+              "worstBefore": null,
+              "worstAfter": 1,
+              "accepted": true,
+              "reason": "空条带，直接接受首项（上一条带已封存）"
+            },
+            {
+              "candidateId": "丁",
+              "shortSide": 2,
+              "worstBefore": 1,
+              "worstAfter": 4,
+              "accepted": false,
+              "reason": "加入后最差比例变差，封条并转入下一条带"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "itemIds": [
+            "丁"
+          ],
+          "orientation": "column",
+          "shortSide": 2,
+          "thickness": 2,
+          "containerBefore": {
+            "x": 2,
+            "y": 2,
+            "width": 2,
+            "height": 2
+          },
+          "containerAfter": {
+            "x": 4,
+            "y": 2,
+            "width": 0,
+            "height": 2
+          },
+          "trials": [
+            {
+              "candidateId": "丁",
+              "shortSide": 2,
+              "worstBefore": null,
+              "worstAfter": 1,
+              "accepted": true,
+              "reason": "空条带，直接接受首项（上一条带已封存）"
+            }
+          ]
+        }
+      ],
+      "order": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ]
+    }
+  },
+  "verify": {
+    "id": 1,
+    "ok": true,
+    "tolerance": {
+      "rel": 1e-9,
+      "areaAbs": 6.4e-8,
+      "lengthAbs": 0.00012649110640673518
+    },
+    "issues": [],
+    "checked": {
+      "rectCount": 4,
+      "totalRectArea": 16,
+      "containerArea": 16,
+      "maxAreaDeviation": 0,
+      "maxOverlapArea": 0
+    }
+  }
+}
